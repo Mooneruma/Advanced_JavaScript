@@ -1,0 +1,356 @@
+
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	</head>
+	
+	
+		<script>
+
+	$(document).ready(function(){
+	$("#FormComplete").css('display','none');
+		$("#button").click(function(){	
+		
+		var Validation = true;
+		
+//NameChecker	
+	var checkName =  $("#custName").val();
+		
+	if( /^[^-\s][a-zA-Z_\s-]+$/.test(checkName))
+	{
+		$('#NameMsg').html("");
+	}
+	else
+	{
+		$('#NameMsg').html("Name is not entered correctly");
+		Validation = false;
+	}
+	//email Checker
+		var checkEmail =  $("#email").val();
+		
+	if(  /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/.test(checkEmail))
+	{
+		$('#emailMsg').html("");
+	}
+	else
+	{
+		$('#emailMsg').html("E-mail is not entered correctly");
+		Validation = false;
+	}
+	// Phone Checker
+		var checkPhone =  $("#custPhone").val();
+		
+	if(  /^\s*(?:\+?(\d{1,3}))?([-. (]*(\d{3})[-. )]*)?((\d{3})[-. ]*(\d{2,4})(?:[-.x ]*(\d+))?)\s*$/g.test(checkPhone))
+	{
+		$('#NumMsg').html("");
+	}
+	else
+	{
+		$('#NumMsg').html("Number must be enters as example: 515-357-5215");
+		Validation = false;
+	}
+	
+	// Product Group
+	
+	if( $('input[name=custProducts]:checked').val())
+	{
+	
+		
+	
+	}
+	else
+	{
+	
+		$('#ProductMsg').html("Please select an option");
+		Validation = false;
+	
+	}
+	
+	//Description limit
+	
+
+	if($('#custComplaint').val()!= "")
+	{
+	if(/^[^-\s][a-zA-Z_\s-.]+$/.test($('#custComplaint').val()))
+	{
+		$('#ComMsg').html("");
+	}
+	else
+	{
+		$('#ComMsg').html("No special characters and 120 character limit.");
+		Validation = false;
+	}
+	}
+	else{
+	$('#ComMsg').html("do not leave this field blank");
+		
+	}
+	alert(Validation);
+		
+		
+		if(Validation == true)
+		{
+			$("#FormComplete").css('display','block');
+			//$('#form1').submit();
+		
+		}
+		
+				$("#button2").click(function()
+			{
+				$("#FormComplete").css('display','none');
+				$('#ComMsg').html("");
+				$('#ProductMsg').html("");
+				$('#NumMsg').html("");
+				$('#NameMsg').html("");
+				$('#emailMsg').html("");
+			})
+	
+			});
+
+		
+	});
+	
+
+	</script>
+	
+	<body>
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+		
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+		font-family: "Impact", Charcoal, sans-serif;
+		font-size: 36px;
+		text-align: center;
+	}
+	
+	body{
+		background-image: url("depositphotos_96834172-stock-illustration-endless-vape-background.jpg");
+		text-align: left;
+		
+	}
+
+	#sidebar{
+		background-color: white; 
+		box-shadow:3px 3px 3px 2px #797979;
+		height: 50px;
+		width: 100px;
+		padding: 5px;
+		text-align: center;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		font-family: "Times New Roman", Times, serif;
+		padding-top: 2em;
+		text-size: 28px;
+	}
+	
+	#wrapper{
+		background-color: rgba(255, 255, 255, 0.99);
+		width: 80%;
+
+	}
+	
+	#wrapTight{
+	width: 95%;
+	}
+	
+	
+	#footer{
+		background-color: black;
+		color: white;
+		width: 100%; 
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+	#TShad{
+		 text-shadow: #aaa 2px 2px 2px;
+	}
+	
+	#BShad{
+		background-color: #EEEEEE; 
+		box-shadow:3px 3px 3px 2px #797979; 
+		height: 100px;
+		width: 100px; 
+		padding: 5px;
+	}
+	
+	#BRounded{
+		border: 2px solid orange;
+		border-radius : 25px;
+		width: 100px;
+		padding: 10px ;
+		text-align:center;
+	}
+	
+	#Seperators{
+		height: 25px;
+		width: 100%; 
+	}
+	
+#FormComplete{
+	
+		color: green;
+	}
+	span{
+	color: red;
+	}
+
+
+	</style>
+
+<div id = "wrapper">
+<div id = "wrapTight">	
+		<header>
+			<div class = "page-header">
+				<h1><u>Centralized Vapor</u></h1>
+				<img src = "17760985_1452070871510858_6076143083147038311_o.png" height = 200cm width = 200cm  align = "center">
+			</div>
+		</header>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Explore our pages</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="HomeProj.html">Home</a></li>
+      <li class="active"><a href="#">Contact</a></li>
+      <li><a href="ShoppingProj.html">Shopping</a></li>
+      <li><a href="LocationProj.html">Location</a></li>
+    </ul>
+  </div>
+</nav>
+		 <div id="Seperators"></div>
+		 <div id="Seperators"></div>
+		
+		
+		<content id = "main">
+
+			<div class = "row">
+			
+				<div class = "col-sm-4">   
+				<h4>
+			At Central Iowa Vapors LLC we take customer service very seriously. We understand that there are many questions you may have regarding vaping or different products, that is why we love it when people contact us. You can either call us at (515) 255-0004 or emails us at info@centraliowaecigs.com. Thanks for visiting our site, we look forward to see you in the stores soon.
+				</h4>
+				<div id="Seperators"></div>
+				<h3>Come see our new flavors!</h3>
+				<img src = "Apple-Watermelon-Duo.jpg" width = 75% height 30%/>
+				</div>
+			
+			
+			
+				<div class = "col-sm-4">
+<h4>
+				<b>CLOSED:</b></br>
+<div id="Seperators"></div>
+New Year’s Day</br>
+Easter</br>
+Memorial Day</br>
+Fourth of July</br>
+Labor Day</br>
+Thanksgiving</br>
+Christmas</br>
+<div id="Seperators"></div>
+<b>CLOSED EARLY:</b></br>
+<div id="Seperators"></div>
+Thanksgiving Eve (estimated 6:00pm check your local shop for exact times)</br>
+<div id="Seperators"></div>
+Christmas Eve (estimated 4:00pm check your local shop for exact times)</br>
+<div id="Seperators"></div>
+New Year’s Eve (estimated 6:00pm check your local shop for exact times)</br>
+<div id="Seperators"></div>
+</h4>				
+				</div>
+				
+				<div class = "col-sm-4">
+				<form id="form1" name="form1" method="post" action="">
+	  <p><h3>Please enter the following information in order to process your concerns.</h3></p>
+	  <p> 
+	    <label for="custName">Name:</label>
+	  	<input type="text" name="custName" id="custName" /><span id = "NameMsg"></span>
+	  </p>
+	  <p> 
+	    <label for="emailName">email:</label>
+	  	<input type="text" name="emailName" id="email" /><span id = "emailMsg"></span>
+	  </p>
+	  <p>
+	    <label for="custPhone">Phone Number: </label>
+	    <input type="text" name="custPhone" id="custPhone" /><span id = "NumMsg"></span>
+	  </p>
+	  <p><h3>Please select a reason for contacting:</h3></p> <span id = "ProductMsg"></span>
+	  <p>
+	    <label>
+	      <input type="radio" name="custProducts" value="books" id="custProducts_0" />
+	      Complaint</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="movies" id="custProducts_1" />
+	      Request</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="electronics" id="custProducts_2" />
+	      Question</label>
+	    <br />
+	    <label>
+	      <input type="radio" name="custProducts" value="computer" id="custProducts_3" />
+	      locations</label>
+	    <br />
+	  </p>
+	  <p><h3>Description of problem:	(Limit 120 characters)</h3></p> <span id = "CharacterLimit"></span>
+	  <p>
+  <label for="custComplaint"></label>
+	    <textarea name="custComplaint" id="custComplaint" cols="45" rows="5"></textarea>
+      </p>
+	  <p>
+	    <input type="button" name="button" id="button" value="File Complaint" />
+	    <input type="button" name="button2" id="button2" value="Reset" /><span id = "ComMsg"></span>
+	  </p>
+	</form>
+				
+				
+				</div>
+			</div>
+		
+		</content>
+
+	
+</div>
+	<content id ="footer">
+		Made for edjucational purposes.
+	</content>
+
+</div>	
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	</body>
+
+</html>

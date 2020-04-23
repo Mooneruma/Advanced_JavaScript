@@ -1,0 +1,765 @@
+
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	</head>
+	
+	<body>
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+		
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+		font-family: "Impact", Charcoal, sans-serif;
+		font-size: 36px;
+		text-align: center;
+	}
+	
+	body{
+		background-image: url("depositphotos_96834172-stock-illustration-endless-vape-background.jpg");
+		text-align: left;
+		
+	}
+
+	#sidebar{
+		background-color: white; 
+		box-shadow:3px 3px 3px 2px #797979;
+		height: 50px;
+		width: 100px;
+		padding: 5px;
+		text-align: center;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		font-family: "Times New Roman", Times, serif;
+		padding-top: 2em;
+		text-size: 28px;
+	}
+	
+	#wrapper{
+		background-color: rgba(255, 255, 255, 0.99);
+		width: 80%;
+
+	}
+	
+	#wrapTight{
+	width: 95%;
+	}
+	
+	
+	
+	#footer{
+		background-color: black;
+		color: white;
+		width: 100%; 
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+	#TShad{
+		 text-shadow: #aaa 2px 2px 2px;
+	}
+	
+	#BShad{
+		background-color: #EEEEEE; 
+		box-shadow:3px 3px 3px 2px #797979; 
+		height: 100px;
+		width: 100px; 
+		padding: 5px;
+	}
+	
+	#BRounded{
+		border: 2px solid orange;
+		border-radius : 25px;
+		width: 100px;
+		padding: 10px ;
+		text-align:center;
+	}
+	
+	#Seperators{
+		height: 25px;
+		width: 100%; 
+	}
+	
+	
+	button{
+	
+	width: 10em;
+	
+	}
+
+
+	</style>
+
+	<script type="text/javascript" src="JsonPop.json"></script>
+	
+	<script>
+	$(document).ready(function(){
+	
+	
+	$("#ProdTanks").hide();
+	$("#ProdAccessories").hide();
+	$("#ProdJuice").hide();
+	$("#ProdMods").hide();
+	
+	$("#Tanks").click(function(){
+
+	$("#ProdTanks").show();
+	$("#ProdAccessories").hide();
+	$("#ProdJuice").hide();
+	$("#ProdMods").hide();	
+
+	});
+	
+	$("#Mods").click(function(){
+
+	$("#ProdTanks").hide();
+	$("#ProdAccessories").hide();
+	$("#ProdJuice").hide();
+	$("#ProdMods").show();	
+
+	});
+	
+	$("#Juice").click(function(){
+
+	$("#ProdTanks").hide();
+	$("#ProdAccessories").hide();
+	$("#ProdJuice").show();
+	$("#ProdMods").hide();	
+
+	});
+	
+	$("#Accessories").click(function(){
+
+	$("#ProdTanks").hide();
+	$("#ProdAccessories").show();
+	$("#ProdJuice").hide();
+	$("#ProdMods").hide();	
+
+	});
+	
+	
+	$.get("JsonPop.json", function(data, status){
+	
+	var student = JSON.parse(data);
+	
+		
+		var _select = $('<select>');
+$.each(student, function(val, text) {
+    _select.append(
+            $('<option></option>').val(val).html(text)
+        );
+});
+$('#dropDownDest').append(_select.html());
+$('#dropDownDestTwo').append(_select.html());
+$('#dropDownDestThree').append(_select.html());
+	});
+	
+	});
+	</script>
+	
+<div id = "wrapper">
+<div id = "wrapTight">	
+		<header>
+			<div class = "page-header">
+				<h1><u>Centralized Vapor</u></h1>
+				<img src = "17760985_1452070871510858_6076143083147038311_o.png" height = 200cm width = 200cm  align = "center">
+			</div>
+		</header>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Explore our pages</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="HomeProj.html">Home</a></li>
+      <li><a href="ContactProj.html">Contact</a></li>
+      <li class="active"><a href="#">Shopping</a></li>
+      <li><a href="LocationProj.html">Location</a></li>
+    </ul>
+  </div>
+</nav>
+		 <div id="Seperators"></div>
+		 <div id="Seperators"></div>
+		
+		
+		<content id = "main">
+
+			<div class = "row">
+			
+				<div class = "col-sm-4">    
+			
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"><span data-toggle="tooltip" title="Click a button to see some of our selections!">Click to see our products right here</span></a>
+	  <div id="Seperators"></div>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><button id ="Tanks">Tanks</button></li><br>
+      <li><button id ="Mods">Mods</button></li><br>
+      <li><button id ="Juice">Juice</button></li><br>
+      <li><button id ="Accessories">Accessories</button></li><br>
+    </ul>
+  </div>
+</nav>
+			
+				</div>
+			
+			
+			
+				<div class = "col-sm-8">
+				
+				<div align = "center">
+					<h3><u>Our Best Starter Kit Starting At $29.99</u></h3><br>
+					<img src = "Ego-T-CE4-E-Cig-E-Hookah-Electronic-Cigarette-Closeup.jpg" height = 20% width = 50%  align = "center">
+
+				</div>
+				</div>
+
+			</div>
+		
+		<div class = "row">
+		<div id="Seperators"></div>
+		</div>
+		
+		<div id = "ProdTanks">
+		
+			<div class = "row">
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>Aspire Athos Tank $34.95</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "Aspire-Athos-Tank.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				Introducing the Athos tank from aspire, the Athos tank is a new heavy hitter for those who prefer both dense clouds and top-notch flavor. It employs a convenient top-fill, bottom adjustable airflow, as well as the innovative penta-coil head and a tri-coil head to provide you with ultimate flavor and tremendous vapor production. Its parts can be fully disassembled to ensure trouble-free daily use, cleaning and maintenance.
+				<div id="Seperators"></div><br>
+				
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				
+				</div>
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>Aspire Cleito $26.95</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "Aspire-Cleito.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				Introducing the Cleito Tank by Aspire, The Aspire Cleito is a Sub-Ohm tank that is more than the sum of its parts. The Aspire Cleito is conveniently refilled using the top fill design. With an all new atomizer design that replaces the standard chimney similar to a cartomizer allows the atomizer head to deliver maximized airflow and vapor production.
+
+The Aspire Cleito uses a revolutionary new coil design that frees up even more restriction in the airflow by eliminating the need for a static chimney within the tank itself. The Aspire Cleito uses clapton style kanthal coils. This results in an expanded flavor profile and increased vapor production.
+
+The Aspire Cleito is made of a stainless steel (304) construction with a glass tube and a wide bore delrin drip tip, which is made of food grade delrin material. You may also use your own standard 510 replacement drip tips as well.
+
+The all new Aspire Cleito atomizer heads are designed to deliver a rush of intense flavor with a broad profile. The Aspire Cleito features an adjustable airflow valve which may be adjusted to your personal preference. The minimum cross section of the airflow is 25.5mm², this design facilitates massive vapor production.
+
+The Aspire Cleito cuffs come in four different colors. These cuffs help to dissipate heat and allow you to color coordinate with your own personal preference or use them as a visual cue to remind you of what kind of e-liquid you have in your tank.
+
+Features and Specs:<br>
+				<div id="Seperators"></div><br>
+
+
+Dimensions: 2-1/4″ x 7/8″ (Including Drip Tip and Threads)
+510 Threaded
+Diameter: 22mm
+3.5ml e-Liquid Capacity
+Top-fill
+Stainless Steel 304 Construction
+Glass Tank
+Adjustable Airflow Valve
+(2) Aspire Cleito Clapton Atomizer Heads Included
+Set of Colored Aspire Cleito Cuffs Included
+Wide Bore Delrin Drip Tip Included
+510 Drip Tip Compatible
+Compatible with Cleito RTA Kit (Sold Separately)
+				<div id="Seperators"></div><br>
+								
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+
+				</div>
+				
+				<div class = "col-sm-4">
+				
+				<h2><b>Aspire Cleito $34.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "GSD-Cleito-120.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				Introducing the Cleito Tank by Aspire, The Aspire Cleito is a Sub-Ohm tank that is more than the sum of its parts. The Aspire Cleito is conveniently refilled using the top fill design. With an all new atomizer design that replaces the standard chimney similar to a cartomizer allows the atomizer head to deliver maximized airflow and vapor production.
+
+The Aspire Cleito uses a revolutionary new coil design that frees up even more restriction in the airflow by eliminating the need for a static chimney within the tank itself. The Aspire Cleito uses clapton style kanthal coils. This results in an expanded flavor profile and increased vapor production.
+
+The Aspire Cleito is made of a stainless steel (304) construction with a glass tube and a wide bore delrin drip tip, which is made of food grade delrin material. You may also use your own standard 510 replacement drip tips as well.
+
+The all new Aspire Cleito atomizer heads are designed to deliver a rush of intense flavor with a broad profile. The Aspire Cleito features an adjustable airflow valve which may be adjusted to your personal preference. The minimum cross section of the airflow is 25.5mm², this design facilitates massive vapor production.
+
+The Aspire Cleito cuffs come in four different colors. These cuffs help to dissipate heat and allow you to color coordinate with your own personal preference or use them as a visual cue to remind you of what kind of e-liquid you have in your tank.
+
+Features and Specs:
+<br>
+				<div id="Seperators"></div><br>
+Dimensions: 2-1/4″ x 7/8″ (Including Drip Tip and Threads)
+510 Threaded
+Diameter: 22mm
+3.5ml e-Liquid Capacity
+Top-fill
+Stainless Steel 304 Construction
+Glass Tank
+Adjustable Airflow Valve
+(2) Aspire Cleito Clapton Atomizer Heads Included
+Set of Colored Aspire Cleito Cuffs Included
+Wide Bore Delrin Drip Tip Included
+510 Drip Tip Compatible
+Compatible with Cleito RTA Kit (Sold Separately)
+				<div id="Seperators"></div><br>
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		
+		<div id = "ProdAccessories">
+		
+			<div class = "row">
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>2-Bay Battery Box $2.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "2-bay-battery-box.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				You are looking at the Efest H2 Battery Case. This is an Efest 18650 polymer dual battery case that will hold two 18650 batteries or four shorter batteries. These make it safer to carry batteries, no matter where you’re going.
+
+Note: No batteries Included. This is just for the polymer battery case.
+				<div id="Seperators"></div><br>
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>Efest LUC V4 $33.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "EFest-LUC-V4.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				1. Charging input: Pressing the rectangle button can change the charging modes(0.5A/1A/2A) and charge different size 3.6V/3.7V Li-ion batteries.
+
+USB output: DC5V 1A USB output connector are compatible with most portable consumer electronics.
+
+0.5A/1A can charge 4pcs : 10440/14500/14650/16340/16650/17650/17670/17350/18350/18490/18500/18650/22650
+
+2A can charge 2pcs : 25500 and 26650 batteries
+
+2. Low power alarming: when discharging consumer electronics, the transparent button will be flashing in blue while the power of battery is lower than 15%, it means battery needs to be charged.
+
+3. Built-in reverse polarity protection: While the charger is connected, each charging channel has reverse polarity protection, the charging light is still green and prevent from any short circuit.
+
+4. Zero voltage activation function: when charger is standby, place over-discharging batteries (battery voltage is under 2V) to charging channel correctly, battery zero voltage activation starts, since battery over-discharging times, capacity and over-discharging degree is different, so the activation time will be different, and red light will turn on after battery activation.
+
+5. Over-charging protection & automatically monitor charging: Once the external power is connected with LUC V4 charger, charger will stop charging when batteries are full; if batteries were not taken off and the battery voltage will be lower than 3.9V because of many factors, charger will charge batteries automatically again. charger will start to charging if putting lower 4.18V batteries into LUC V4 charger.
+
+6. 1 Amp Portable USB Output: The charger can be used to charge most USB devices, such as mobile phone, iPad, MP3, Mp4, PSP etc. To do so, insert a fully charged battery into channel 2 of the charger, disconnect the AC wall plug and hold the rectangle button for 2 seconds
+
+Use Rechargeable Batteries or With PCB Batteries. Other types of batteries may cause personal injury. Do NOT leave batteries charging unattended/overnight!
+				<div id="Seperators"></div><br>
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+				
+				<div class = "col-sm-4">
+				
+				<h2><b>Efest LUC V6 Charger $39.95</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "Efest-LUC-V6.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				Input – AC 100V-240V 50/60Hz or DC 12V 2A
+Output – 4.2V +/-.05V
+Output Current – .68A x 6 channels or 2A x 2 channels
+USB Output – 5.0-5.5V 1A
+Features:
+
+Intelligent lithium ion battery charger
+Digital display with charging indicators for each channel
+Compatible with most sizes of cylindrical lithium-ion batteries ranging from 10440 to 26650
+USB output allows the charger act as a power bank to charge other USB devices
+Automatically detects battery power status and selects the appropriate voltage and charge mode
+Automatically stops when charging is complete and prevents batteries from being over-charged
+Features reverse polarity protection if you accidentally insert a battery the wrong way
+3 year Manufacturer Warranty
+What’s in the box:
+
+Efest LUC V6 digital battery charger
+Standard USA power plug
+User Manual
+Scratch and Check validation serial number
+				<div id="Seperators"></div><br>
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		
+		<div id = "ProdJuice">
+		
+			<div class = "row">
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>Blazz! Berry $25.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "blazz-berry-1.png" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				Delightfully sweet and sour blue raspberry slush drink with a hint of ripe strawberry.
+				<div id="Seperators"></div><br>
+	
+				<select id="dropDownDest"></select>
+	
+				<div id="Seperators"></div><br>
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>Berry Burst $28.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "Berry-Burst-1.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				Berry Burst it features an explosive blast of juicy and fresh assortment of many different berries.
+				<div id="Seperators"></div><br>
+				
+				<select id="dropDownDestTwo"></select>
+				
+				<div id="Seperators"></div><br>
+
+				
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+				
+				<div class = "col-sm-4">
+				
+				<h2><b>Peach + Raspberry $28.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "Burst-Peach-Raspberry.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				Fresh ice cold peaches mixed with freshly grown organic raspberries brings you to a state of fruitopia!
+				<div id="Seperators"></div><br>
+				
+				<select id="dropDownDestThree"></select>
+
+				<div id="Seperators"></div><br>
+
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		
+		<div id = "ProdMods">
+		
+			<div class = "row">
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>DotMod DotBox 200W $180.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "dotbox-200.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				The 200w dotBox offers a sleek, trim chassis made from anodized aluminum that houses dual 18650 rechargeable batteries (not included). This unique and stylish box mod features dotmod’s proprietary purpose-built microprocessor that eliminates slow charging, reliability issues, and slow wattage ramp-up found in other processors. Our powerful and efficient chip set is far superior to others and ensures the highest performance, reliability, and functionality on the market.
+
+NEW power curve mode for exceptional output control
+Dual 18650 power source (not included)
+200-watt output
+0.08-3.0 OHM operational range
+Proprietary dotChip technology
+Power locking capabilities
+Auto timeout button lock
+Multiple temperature control settings
+24K gold plated buttons, firing pin, and 510
+Magnetic door
+Plastic encased chip set
+Beveled edges
+All anodized design
+dotmod logo on the door
+Durable aluminum box
+<div id="Seperators"></div><br>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+			
+				<div class = "col-sm-4">
+				
+				<h2><b>Eleaf Ikonn Total 50W $46.95</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "Eleaf-Ikonn-Total.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				The Eleaf iKonn Total 50W Starter Kit with Ello Mini XL Sub-Ohm Tank is a compact side by side device capable of extraordinary vapor production. The iKonn mod is designed with a recessed 510 connection accessed via a sliding windowed side panel. The removable side panel protects the tank and is used as a squeeze fire firing button. The Ello Mini XL Sub-Ohm Tank is a 22mm 5.5ml tank which sits parallel with the Single 18650 (sold separately) battery tube, giving the iKonn Total a compact form factor. The Ello utilizes the new HW Series atomizers and includes both the single parallel 0.2 ohm coil as well as the dual parallel 0.3 ohm coil. The iKonn features a stealth LED battery life indicator for quick battery life visualization and the stealth button design gives the iKonn a striking visual presentation. The iKonn Total 50W Starter Kit is a new innovative recessed tank style setup with hidden button design, offering easy operation and excellent performance in a simple, compact and stylish package.
+
+iKonn Mod Features:
+
+Protected Direct Voltage Output
+Atomizer Resistance Dependent
+0.15 to 3.0 ohm Atomizer Resistance
+50W Max Output Limit
+4.2V Max Output
+Low Voltage/Atomizer Short/Atomizer Short Protection
+Single 18650 Battery Design
+Battery Sold Separately
+Micro USB Charged
+1A Maximum
+Recessed Stealth 510 Connection
+Ultra Compact Form Factor
+Side by Side Design
+Slide Off Tank Protection Panel
+Compatible with 22mm Diameter Atomizers
+Minimum Recommended Height of 40mm
+Gold Plated Contact
+Spring Loaded
+Single Button Operation
+Squeeze Fire Design
+LED Battery Life Indicator
+100 to 60%
+Stays Lit
+59 to 30%
+Flashes Slowly
+29 to 10%
+Flashes Moderately
+9 to 0%
+Flashes Frequently
+Zinc Alloy Construction
+
+Ello Mini XL Sub-Ohm Tank Features:
+
+22mm Diameter
+Slide Top Fill System
+5.5ml Tank Capacity
+Dual Adjustable Airslots
+13mm by 2mm Each
+HW Series Coils
+HW1 0.2 ohm Coil
+Single Parallel Coil
+40 to 80W
+HW2 0.3 ohm Coil
+Dual Parallel Coil
+30 to 70W
+Vertical Coil Arrangement
+Organic Cotton Wicking
+Stainless Steel and Glass Construction
+Gold Plated 510 Connection
+Product Includes:
+
+One Eleaf iKonn Mod
+One Eleaf Ello Mini XL Sub-Ohm Tank
+One HW1 0.2 ohm Coil
+One Hw2 0.3 ohm Coil
+Micro USB Charging Cable
+User Manuals
+<div id="Seperators"></div><br>
+<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+				
+				<div class = "col-sm-4">
+				
+				<h2><b>HexNA DNA 200 by Craving Vapor $235.00</b></h2><br>
+				<div id="Seperators"></div>
+				<img src = "HexNA.jpg" width = 90% height = 250em /><br>
+				<div id="Seperators"></div><br>
+				<h2><b><u>Description</u></b></h2><br>
+				This box mod is a DNA200 powered vaping machine! Modeled after Evolv’s DNA200 reference mod, it features a 900mAh 3S non-removable Li-Po battery, and all the standard bells and whistles you are used to with an Evolv chip. The DNA200 also includes the ability to use Evolv’s EScribe software to step the level of customization even further up!
+
+The DNA 200 is a power regulated digital switch-mode DC-DC converter for personal vaporizers. It features Evolv’s patented Wattage Control, Temperature Protection, Preheat, Digital User Controls, OLED Screen, Onboard Buttons and Synchronous Rectification for maximum battery life and minimal heat generation. The DNA 200 runs from a 3 cell lithium polymer battery, and features cell-by-cell battery monitoring and integrated balance charger. The USB port and Evolv’s EScribe software can be used to customize or monitor the user experience. It is the most advanced personal vaporizer controller ever made. The DNA 200 is vaping down to a science.
+				<div id="Seperators"></div><br>
+				<form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" align = "center">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="redesignedMoon-facilitator@gmail.com">
+<input type="hidden" name="lc" value="US">
+<input type="hidden" name="amount" value="2.00">
+<input type="hidden" name="currency_code" value="USD">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHostedGuest">
+<input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.sandbox.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form> <br><div id="Seperators"></div>
+				</div>
+				
+			</div>
+		
+		</div>
+		
+		</content>
+
+	
+	</div>
+	<content id ="footer">
+		Made for edjucational purposes.
+	</content>
+
+</div>	
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	</body>
+
+</html>

@@ -1,0 +1,160 @@
+
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+	
+	
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+		text-align: left;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="FileOne.json"></script>
+	<script type="text/javascript" src="FileTwo.json"></script>
+	<script type="text/javascript" src="FileThree.json"></script>
+	
+<script>
+$(document).ready(function(){
+	
+	$.get("FileOne.json", function(data, status){
+	
+		var student = JSON.parse(data);
+	
+	$("#One").click(function(){
+	
+	$("#Feild").html(student.student_id);
+    $("#FeildTwo").html(student.student_first_name);
+    $("#FeildThree").html(student.student_last_name);
+    $("#FeildFour").html(student.student_major);
+    $("#FeildFive").html(student.student_credits);
+    $("#FeildSix").html(student.student_gpa);
+    $("#FeildSeven").html(student.student_registration_date);
+	});
+		
+	});
+	
+	
+	
+	$.get("FileTwo.json", function(data, status){
+	
+		var student = JSON.parse(data);
+	
+	$("#Two").click(function(){
+	
+	$("#Feild").html(student.student_id);
+    $("#FeildTwo").html(student.student_first_name);
+    $("#FeildThree").html(student.student_last_name);
+    $("#FeildFour").html(student.student_major);
+    $("#FeildFive").html(student.student_credits);
+    $("#FeildSix").html(student.student_gpa);
+    $("#FeildSeven").html(student.student_registration_date);
+	});
+		
+	});
+	
+	
+	$.get("FileThree.json", function(data, status){
+	
+		var student = JSON.parse(data);
+	
+	$("#Three").click(function(){
+	
+	$("#Feild").html(student.student_id);
+    $("#FeildTwo").html(student.student_first_name);
+    $("#FeildThree").html(student.student_last_name);
+    $("#FeildFour").html(student.student_major);
+    $("#FeildFive").html(student.student_credits);
+    $("#FeildSix").html(student.student_gpa);
+    $("#FeildSeven").html(student.student_registration_date);
+	});
+		
+	});
+});
+</script>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+
+			Studendt id: &nbsp;<span id = "Feild"></span><br/>
+			First Name: &nbsp;<span id = "FeildTwo"></span><br/>
+			Last Name: &nbsp;<span id = "FeildThree"></span><br/>
+			Major: &nbsp;<span id = "FeildFour"></span><br/>
+			Credits: &nbsp;<span id = "FeildFive"></span><br/>
+			GPA: &nbsp;<span id = "FeildSix"></span><br/>
+			Reg. Date: &nbsp;<span id = "FeildSeven"></span><br/><br/>
+		
+		<input type = "button" value = "File One" id ="One"></input>
+		<input type = "button" value = "File Two" id ="Two"></input>
+		<input type = "button" value = "File Three" id ="Three"></input>
+		
+		</content>
+	
+	<content id ="footer">
+		
+	</content>
+</div>	
+	</body>
+
+</html>

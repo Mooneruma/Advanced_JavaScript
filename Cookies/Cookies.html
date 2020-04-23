@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	<script>
+
+
+
+	
+	
+	</script>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+
+		<SCRIPT LANGUAGE="JavaScript">
+<!--
+// create an instance of the Date object
+var now = new Date();
+// fix the bug in Navigator 2.0, Macintosh
+fixDate(now);
+
+/*
+cookie expires in one year (actually, 365 days)
+365 days in a year
+24 hours in a day
+60 minutes in an hour
+60 seconds in a minute
+1000 milliseconds in a second
+*/
+
+now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1000);
+var visits = getCookie("counter");
+// if the cookie wasn't found, this is your first visit
+if (!visits) {
+  visits = 1; // the value for the new cookie
+  document.write("By the way, this is your first time here.");
+} else {
+  // increment the counter
+  visits = parseInt(visits) + 1;
+  document.write("By the way, you have been here " + visits + " times.");
+}
+// set the new cookie
+setCookie("counter", visits, now);
+// -->
+</SCRIPT>
+		</content>
+
+		<content id = "sidebar">
+
+
+		</content>
+	
+	<content id ="footer">
+		footer
+	</content>
+</div>	
+	</body>
+
+</html>

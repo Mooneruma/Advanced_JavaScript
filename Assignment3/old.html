@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+	
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	
+
+    <script>
+        var teams = ["Steelers", "Seahawks", "Titans"];
+
+        function displayTeams() {
+            $(teams).each(function(a, b) {
+                $("<br>Team " + (a+1) + ": " + b + "</br>").appendTo("#teams");
+            });
+        }
+
+
+        function displayDate() {
+            var date = new Date($.now());
+
+            $("#date").html(date.toDateString());
+        }
+
+        $(document).ready(function() {
+            displayDate();
+            displayTeams();
+			
+			$("#Total").click( function() 
+			{
+			
+			var price = $("#price").val();
+			var quantity = $("#quantity").val();
+			
+			var convert = price * quantity;
+			var TotalOut = convert.toFixed(2);
+			
+			$("#TotalOut").html(TotalOut);
+			})
+			
+        });
+    </script>
+
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+		
+			<div id = "date"></div>
+			<div id= "teams"></div>
+			
+			<form>
+			
+			Cost <input type = "txt" name = "price" id = "price"/>
+			<br>
+			Quantity<input type = "txt" name = "quantity" id = "quantity"/> 
+			<br>
+			
+			<input type="button" id="Total" value="Total" />
+
+			</form>
+			
+			
+			Your total price will be: $<span id = "TotalOut"> Result Goes here! </span>
+			
+		</content>
+
+		<content id = "sidebar">
+		
+			
+
+		</content>
+	
+	<content id ="footer">
+		footer
+	</content>
+</div>	
+	</body>
+
+</html>

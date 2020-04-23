@@ -1,0 +1,301 @@
+
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	</head>
+	
+	<body>
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+		
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+		font-family: "Impact", Charcoal, sans-serif;
+		font-size: 36px;
+		text-align: center;
+	}
+	
+	body{
+		background-image: url("depositphotos_96834172-stock-illustration-endless-vape-background.jpg");
+		text-align: left;
+		
+	}
+
+	#sidebar{
+		background-color: white; 
+		box-shadow:3px 3px 3px 2px #797979;
+		height: 50px;
+		width: 100px;
+		padding: 5px;
+		text-align: center;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		font-family: "Times New Roman", Times, serif;
+		padding-top: 2em;
+		text-size: 28px;
+	}
+	
+	#wrapper{
+		background-color: rgba(255, 255, 255, 0.99);
+		width: 80%;
+
+	}
+	
+	#wrapTight{
+	width: 95%;
+	}
+	
+	
+	#footer{
+		background-color: black;
+		color: white;
+		width: 100%; 
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+	#TShad{
+		 text-shadow: #aaa 2px 2px 2px;
+	}
+	
+	#BShad{
+		background-color: #EEEEEE; 
+		box-shadow:3px 3px 3px 2px #797979; 
+		height: 100px;
+		width: 100px; 
+		padding: 5px;
+	}
+	
+	#BRounded{
+		border: 2px solid orange;
+		border-radius : 25px;
+		width: 100px;
+		padding: 10px ;
+		text-align:center;
+	}
+	
+	#Seperators{
+		height: 25px;
+		width: 100%; 
+	}
+	
+
+
+
+	</style>
+
+	<script>
+$(document).ready(function(){
+
+	 $("#StoreOne").hide();
+	 $("#StoreTwo").hide();
+	 $("#StoreThree").hide();
+
+	$("#contactType").change(function(){
+	
+	 
+	 if( $("#contactType").val() == "C"){
+	 
+		$("#StoreOne").show();
+		$("#StoreTwo").hide();
+		$("#StoreThree").hide();
+		
+	 
+	 }
+	 
+	 if( $("#contactType").val() == "B"){
+	 
+	 $("#StoreOne").hide();
+	 $("#StoreTwo").hide();
+	 $("#StoreThree").hide();	
+	 
+	 }
+	 
+	 if( $("#contactType").val() == "T"){
+	 
+		$("#StoreOne").hide();
+		$("#StoreTwo").show();
+		$("#StoreThree").hide();		
+		
+	 
+	 }
+	 
+	 if( $("#contactType").val() == "P"){
+	 
+		$("#StoreOne").hide();
+		$("#StoreTwo").hide();
+		$("#StoreThree").show();		
+		
+	 
+	 }
+	
+	});
+	
+});
+</script>
+	
+<div id = "wrapper">	
+<div id = "wrapTight">
+		<header>
+			<div class = "page-header">
+				<h1><u>Centralized Vapor</u></h1>
+				<img src = "17760985_1452070871510858_6076143083147038311_o.png" height = 200cm width = 200cm  align = "center">
+			</div>
+		</header>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Explore our pages</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="HomeProj.html">Home</a></li>
+      <li><a href="ContactProj.html">Contact</a></li>
+      <li><a href="ShoppingProj.html">Shopping</a></li>
+      <li class="active"><a href="#">Location</a></li>
+    </ul>
+  </div>
+</nav>
+		 <div id="Seperators"></div>
+		 <div id="Seperators"></div>
+		
+		
+		<content id = "main">
+
+			<div class = "row">
+			
+				<div class = "col-sm-4">    
+			<h1><u>Ankeny</u></h1><br>
+			 <div id="Seperators"></div>
+(515) 963-0004<br>
+
+207 NE Delaware, Suite 21<br>
+Ankeny, IA 50021<br>
+				</div>
+			<br>
+			
+				
+				<div class = "col-sm-8">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2977.4190225471284!2d-93.58268058448401!3d41.73305397923397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee8f883a88995f%3A0xfea3f6b93886a67c!2sCentral+Iowa+Vapors!5e0!3m2!1sen!2sus!4v1513258387149" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+				
+				
+				</div>
+			</div>
+		
+		<div class = "row">
+	<div id="Seperators"></div>	
+<p>
+  <label>Alternate locations  withen Iowa.
+    <select name="contactType" id="contactType">
+	  <option value="B">-Select Option-</option>
+      <option value="C">Waterloo</option>
+      <option value="T">Cedar Rapids</option>
+      <option value="P">North</option>
+    </select>
+  </label>
+</p>	
+<div id="Seperators"></div>
+		</div>
+		
+
+		<div id = "StoreOne">	
+		<div class = "row">
+		
+			<div class = "col-sm-4">
+		<h1><u>Waterloo</u></h1><br>
+		<div id="Seperators"></div>
+(319) 233-4148<br>
+
+2829 University Avenue<br>
+Waterloo, IA 50701<br>
+			</div>
+		
+			<div class = "col-sm-8">
+			<div id="Seperators"></div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1907.46394848164!2d-92.38435308128133!3d42.497684617784586!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e5549d21aa38f5%3A0x2f0af9b54087784a!2sCentral+Iowa+Vapors!5e0!3m2!1sen!2sus!4v1513259888634" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		
+		</div>
+	</div>
+	
+		<div id = "StoreTwo">	
+		<div class = "row">
+		
+			<div class = "col-sm-4">
+		<h1><u>Cedar Rapids</u></h1><br>
+		<div id="Seperators"></div>
+(319) 294-3244<br>
+
+3950 Center Point Road NE<br>
+Cedar Rapids, IA 52402<br>
+			</div>
+		
+			<div class = "col-sm-8">
+			<div id="Seperators"></div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2964.10466891099!2d-91.66531058441653!3d42.0194869546722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87e4f08ee3296e93%3A0x5952dc15319eeebd!2sCentral+Iowa+Vapors!5e0!3m2!1sen!2sus!4v1513259995049" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		
+		</div>
+	</div>
+	
+		<div id = "StoreThree">	
+		<div class = "row">
+		
+			<div class = "col-sm-4">
+		<h1><u>North</u></h1><br>
+		<div id="Seperators"></div>
+(515) 265-0004<br>
+
+3921 E. 14th Street<br>
+Des Moines, IA 50313<br>
+			</div>
+		
+			<div class = "col-sm-8">
+			<div id="Seperators"></div>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1491.0485327233869!2d-93.6007625061075!3d41.63203330437489!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee9a17c90ada4d%3A0xf61d9b0205949e53!2sCentral+Iowa+Vapors!5e0!3m2!1sen!2sus!4v1513260121342" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>
+			</div>
+		<div id="Seperators"></div>
+		</div>
+	</div>
+	</content>
+
+	
+	</div>
+	<content id ="footer">
+		Made for edjucational purposes.
+	</content>
+
+</div>	
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	</body>
+
+</html>

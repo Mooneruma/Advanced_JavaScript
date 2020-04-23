@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+	
+	
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+	ul{
+	text-align: left;}
+	
+
+	</style>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+
+		<h1><b>Window Object Review</b></h1>
+		
+		<ul>
+		<br>
+		<li>Window Object</li>
+		<br><p>The window object represents an open window in a browser. By calling the  window object multiple methods 
+		can be used.</p>
+		<br><li>Navigator Object</li>
+		<br><p>The navigator object contains information about the browswer. Can be used to check setting of the browser
+		for things such as whether or not cookies are enabled. Can also be called on to determine what type
+		browser your page is being displayed on.</p>
+		<br><li>location Object</li>
+		<br><p> The location object contains information about the current URL being used. The object is apart of the window
+		object and has to be accessed by using window.location property.</p>
+		<br><li>screen Object</li>
+		<br><p>This is used to access information about the users screen. Useful for setting the size 
+		of websites. Can be used to determine height and width of the users screen.</p>
+		<br><li>history Object</li>
+		<br><p>The history object contains the URLs visited by the user accessed using the window browser.
+		This to must be used through the window property to access. User history is usually apart of the browser.</p>
+		<br><li>document Object</li>
+		<br><p>When a website is loaded into a web broswer the webpage it presents is the document object.
+		Everything withen the document object then becomes nodes for the webpage to be produced. The Document object
+		allows javascript access to all of its properties and methods to access the content from withen.</p>
+		
+		</ul>
+		
+		<br>
+		
+		<h1><b>DOM Review</b></h1>
+		
+		<ul>
+		
+		<li>Document Object</li>
+		<br><p>The Dom is loaded from the html that is recieved into the browser. The Dom And CSSOM "css object" are on 
+		top of what is called a rendering tree. In otherwise the Dom and Css each have a tree for what order things are rendered.
+		The Document Object in short is the base of your entire webpage.</p>
+		<br><li>How the browser renders</li>
+		<br><p>The Broswer renders by taking in the html the broswer recieves and then building the DOM. When it loads the DOM it also loads the css included.
+		Once these begin rendering everything withen them then starts to render in order of thier rendering trees. As each part renders 
+		they are a part of the document object appering on your page.</p>
+		<br><li>Node</li>
+		<br><p>A node is technically what makes up most of the wepage including the document, every html element
+		, the text, attributes, and all comments are different types of nodes. These nodes inherit thier properites
+		from the parents or the top node which is called the root. Nodes can have a number of children in which they
+		pass thier properties to.</p>
+		<br><li>Tree Structure</li>
+		<br><p>When a web page is loaded a DOM is created laying out a model for the website. When the model is loaded
+		it creates a tree of objects. With this document object model Java Script has the ability to access the dom to 
+		to get all the power it needs to edit dynamic HTML. By using this tree you can also determine a pattern of inheritence.</p>
+		<br><li>event model or event handlers</li>
+		<br><p>Event model allows you to use javascipt to act on diffenet event handlers. Such as when
+		an onclick event is triggered the event wont wend until the javascript has been executed. 
+		This can allow you to creat multiple methods to work with your javascipt functions such as mouse over, hover
+		,focus and many others.</p>
+		
+		
+		
+		
+		</ul>
+		
+		</content>
+
+		<content id = "sidebar">
+
+
+		</content>
+	
+	<content id ="footer">
+		
+	</content>
+</div>	
+	</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+	
+	
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	
+<script>
+$(document).ready(function(){
+
+        $("#Products").hide();
+		$("#Colors").hide();
+
+    $("#One").click(function(){
+        $("#Colors").hide();
+		$("#Products").show();
+	});
+
+	$("#Two").click(function(){
+        $("#Products").hide();
+		$("#Colors").show();
+	});
+	
+});
+</script>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+	
+		<content id = "main">
+
+
+		
+		<div id = "Products">
+<select>
+  <option value="Printer">Printer</option>
+  <option value="Desk">Desk</option>
+  <option value="bobbleHead">bobble head</option>
+  <option value="Pencil">Pencil</option>
+</select>		
+		</div>
+
+		<div id = "Colors">
+<select>
+  <option value="Red">Red</option>
+  <option value="blue">blue</option>
+  <option value="yellow">yellow</option>
+  <option value="purple">purple</option>
+</select>		
+		</div>
+		
+		</content>
+
+		<content id = "sidebar">
+
+		<input type="radio" name="Selection" id="One">One
+		<br>
+		<input type="radio" name="Selection" id="Two">Two
+		
+		</content>
+	
+	<content id ="footer">
+		
+	</content>
+</div>	
+	</body>
+
+</html>

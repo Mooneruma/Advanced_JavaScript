@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("image/fractal-1224853_1280.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: center;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 2em;
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 75%;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+
+	</style>
+	
+	<script>
+	
+		var myBook = {
+		"ISBN":"0-596-00016-2",
+		"bookPrice":"39.95",
+		"publisher":"O'Reilly &amp",
+		"copywrite":"2000",
+		
+			"authorName":"Brett",
+			"authorLname":"McLaughlin",
+			"royalty":"22.00",
+		};
+	
+	var myBook2 = {
+		"ISBN":"1-861003-32-3",
+		"bookPrice":"49.99",
+		"publisher":"Wrox Press",
+		"copywrite":"2000",
+		
+			"authorNameO":"James",
+			"authorLnameO":"Britt",
+		
+			"authorName":"Tuen",
+			"authorLname":"Duynstee",
+		
+	};
+	
+	var myJsonBook = JSON.stringify(myBook);
+	var myJsonBook2 = JSON.stringify(myBook2);
+	
+	</script>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Kmoonpage.com</h1></u>
+		</header>
+		<h1>MyBook</h1>
+		<script>document.write("ISBN", myBook2.ISBN," bookPrice ", myBook2.bookPrice," publisher ", myBook2.publisher
+		," copywrite ", myBook2.copywrite," authors ", myBook2.authorNameO,' ', myBook2.authorLnameO
+		, " & " , myBook2.authorName,' ', myBook2.authorLname);</script>
+		<br><br><br>
+		<h1>MyBook2</h1>
+		<script>document.write("ISBN", myBook.ISBN," bookPrice ", myBook.bookPrice," publisher ", myBook.publisher
+		," copywrite ", myBook.copywrite," authors "
+		 , myBook.authorName,' ', myBook.authorLname);</script>
+		 <br><br><br>
+		<h1>Stringify JSON</h1>
+		
+<script>document.write(myJsonBook);</script>
+<br><br><br>
+<script>document.write(myJsonBook2);</script>
+		</content>
+	
+	<content id ="footer">
+		
+	</content>
+</div>	
+	</body>
+
+</html>

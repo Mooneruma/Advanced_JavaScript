@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+
+	<head>
+	<meta charset="utf-8">
+	<!-- head does not display-->
+		<title>home</title>
+	
+
+	</head>
+	
+	<style>
+	
+	*{
+		margin: auto;
+		padding: 0;
+	}
+	
+	header{
+		background-color: black;
+		color: white;
+		padding-top: 0.5em;
+		padding-bottom: 1em;
+	}
+	
+	body{
+		background-image: url("stock-vector-abstract-elegant-seamless-pattern-with-floral-background-seamless-pattern-can-be-used-for-292079738.jpg");
+		text-align: center;
+	}
+
+	#sidebar{
+		text-align: left;
+		background-color: white;
+		width: 23%;
+		float: left;
+		border: solid thick;
+		margin-top: 25em;
+		
+	}
+
+	#main{
+		float: right;
+		width: 75%;
+		padding-top: 2em;
+		text-align: left;
+	}
+	
+	#wrapper{
+		background-color: white;
+		width: 800px;
+		padding-bottom: 35cm;
+	}
+	
+	#footer{
+		background-color: white;
+		color: black;
+		margin: auto;
+		width: 75%;
+		padding: 0;
+		float: right;
+		padding-top: 2em;
+	}
+	
+	#Ajust{
+	text-align: center;
+	}
+	
+	
+	</style>
+	
+<style>
+body {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: relative;
+    height: 50%;
+    overflow: auto;
+	Width: 15%;
+}
+
+li button {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+	width: 100%;
+}
+
+li button.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+li button:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+</style>	
+	
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	
+	<script>
+	$(document).ready(function(){
+	
+	var multiplier = 1;
+	$("#BeefPic").hide();
+	$("#OrangePic").hide();
+	$("#BeansPic,#CookOrange,#CookBeef,#CookBeans").hide();
+	
+	$("#Beans").click(function(){
+	
+	$("#BeefPic,#PickSel").hide();
+	$("#OrangePic,#CookOrange,#CookBeef").hide();
+	$("#BeansPic,#CookBeans").show();
+	
+	$('#TitleFood').html("Crockpot Chili");
+	$('#IngrediantOne').html("serves " + 6);
+	$('#IngrediantTwo').html(25+ " minuets to prepare");
+	$('#IngrediantThree').html(6 +  "hours to cook");
+	$('#IngrediantFour').html(2 + " tbsp. cooking Oil");
+	$('#IngrediantFive').html(1 + " Cup of onions");
+	$('#IngrediantSix').html(1 + " Cup of chopped peppers");
+	$('#IngrediantSeven').html(4 + " tbsp. chili powder");
+	$('#IngrediantEight').html(1 + " tsp. hot chili powder");
+	$('#IngrediantNine').html(1 + " lb ground beef or chicken");
+	$('#IngrediantTen').html(2 + " red beans");
+	$('#IngrediantEleven').html(2 + " Kidney beans");
+	$('#IngrediantTwelve').html(2 + " Tomato Puree");
+	$('#IngrediantThirteen').html(2 + " Tomato Sauce");
+	$('#IngrediantFourteen').html(1 + " Cup shredded cheese");
+	$('#IngrediantFifthteen').html(0.5 + " Sour Cream");
+
+	
+	$("#DishSize").change(function(){
+
+	$('#IngrediantOne').html("serves " + 6 *  $("input[name='Portion']:checked").val());
+	$('#IngrediantTwo').html(25*  $("input[name='Portion']:checked").val()+ " minuets to prepare");
+	$('#IngrediantThree').html(6*  $("input[name='Portion']:checked").val()+  "hours to cook");
+	$('#IngrediantFour').html(2*  $("input[name='Portion']:checked").val()+ " tbsp. cooking Oil");
+	$('#IngrediantFive').html(1*  $("input[name='Portion']:checked").val()+ " Cup of onions");
+	$('#IngrediantSix').html(1*  $("input[name='Portion']:checked").val()+ " Cup of chopped peppers");
+	$('#IngrediantSeven').html(4*  $("input[name='Portion']:checked").val()+ " tbsp. chili powder");
+	$('#IngrediantEight').html(1*  $("input[name='Portion']:checked").val()+ " tsp. hot chili powder");
+	$('#IngrediantNine').html(1*  $("input[name='Portion']:checked").val()+ " lb ground beef or chicken");
+	$('#IngrediantTen').html(2*  $("input[name='Portion']:checked").val()+ " red beans");
+	$('#IngrediantEleven').html(2*  $("input[name='Portion']:checked").val()+ " Kidney beans");
+	$('#IngrediantTwelve').html(2*  $("input[name='Portion']:checked").val()+ " Tomato Puree");
+	$('#IngrediantThirteen').html(2*  $("input[name='Portion']:checked").val()+ " Tomato Sauce");
+	$('#IngrediantFourteen').html(1*  $("input[name='Portion']:checked").val()+ " Cup shredded cheese");
+	$('#IngrediantFifthteen').html(0.5*  $("input[name='Portion']:checked").val()+ " Sour Cream");
+
+
+	});
+	
+	});
+	
+	$("#Orange").click(function(){
+	
+	$("#BeefPic,#PickSel,#CookBeef,#CookBeans").hide();
+	$("#OrangePic,#CookOrange").show();
+	$("#BeansPic").hide();
+	
+	$('#TitleFood').html("Orange Chicken");
+	$('#IngrediantOne').html("serves " + 5);
+	$('#IngrediantTwo').html(24 + " minuets to prepare");
+	$('#IngrediantThree').html(5 + " hours to cook");
+	$('#IngrediantFour').html(1 + " cup of butter");
+	$('#IngrediantFive').html(1 + " cup of orange slices");
+	$('#IngrediantSix').html(1 + " quart of orange sauce");
+	$('#IngrediantSeven').html(3 + " lb of chicken");
+	$('#IngrediantEight').html(1 + " tbsp chicken flavor powder");
+	$('#IngrediantNine').html(1 + " 1b shrimp");
+	$('#IngrediantTen').html(2 + " cups of water");
+	$('#IngrediantEleven').html(2 + " sliced red peppers");
+	$('#IngrediantTwelve').html(2 + " sliced green peppers");
+	$('#IngrediantThirteen').html(2 + "sliced onions");
+	$('#IngrediantFourteen').html(1 + "cherry tomatoes");
+	$('#IngrediantFifthteen').html(1 + "slice of cheese");
+
+	
+	$("#DishSize").change(function(){
+
+	$('#TitleFood').html("Orange Chicken");
+	$('#IngrediantOne').html("serves " + 4*  $("input[name='Portion']:checked").val());
+	$('#IngrediantTwo').html(23*  $("input[name='Portion']:checked").val() + " minuets to prepare");
+	$('#IngrediantThree').html(5*  $("input[name='Portion']:checked").val()+ " hours to cook");
+	$('#IngrediantFour').html(1*  $("input[name='Portion']:checked").val()+ " cup of butter");
+	$('#IngrediantFive').html(1*  $("input[name='Portion']:checked").val()+ " cup of orange slices");
+	$('#IngrediantSix').html(1*  $("input[name='Portion']:checked").val()+" quart of orange sauce");
+	$('#IngrediantSeven').html(3*  $("input[name='Portion']:checked").val()+ " lb of chicken");
+	$('#IngrediantEight').html(1*  $("input[name='Portion']:checked").val() + " tbsp chicken flavor powder");
+	$('#IngrediantNine').html(1*  $("input[name='Portion']:checked").val()+ " 1b shrimp");
+	$('#IngrediantTen').html(2*  $("input[name='Portion']:checked").val()+ " cups of water");
+	$('#IngrediantEleven').html(2*  $("input[name='Portion']:checked").val()+ " sliced red peppers");
+	$('#IngrediantTwelve').html(2*  $("input[name='Portion']:checked").val()+ " sliced green peppers");
+	$('#IngrediantThirteen').html(2*  $("input[name='Portion']:checked").val()+ "sliced onions");
+	$('#IngrediantFourteen').html(1*  $("input[name='Portion']:checked").val()+ "cherry tomatoes");
+	$('#IngrediantFifthteen').html(1*  $("input[name='Portion']:checked").val()+ "slice of cheese");
+
+	});
+	
+	});
+	
+	$("#Beef").click(function(){
+	
+	$("#BeefPic,#CookBeef").show();
+	
+	$("#BeansPic,#OrangePic,#PickSel,#CookOrange,#CookBeans").hide();	
+	
+	$('#TitleFood').html("Mongolian Beef");
+	$('#IngrediantOne').html("serves " + 9);
+	$('#IngrediantTwo').html(28 + " minuets to prepare");
+	$('#IngrediantThree').html(9 + " hours to cook");
+	$('#IngrediantFour').html(5 + " tbsp cooking oil");
+	$('#IngrediantFive').html(4 + " cups of onions");
+	$('#IngrediantSix').html(4 + " lbs of beef strips");
+	$('#IngrediantSeven').html(7 + " beef broth for cooking");
+	$('#IngrediantEight').html(4 + " tbsp Chili powder");
+	$('#IngrediantNine').html(4 + " tbs salt");
+	$('#IngrediantTen').html(5 + " tbsp beef seasoning");
+	$('#IngrediantEleven').html(5 + " cups water");
+	$('#IngrediantTwelve').html(5 + " green peppers");
+	$('#IngrediantThirteen').html(5 + " cup shredded cheese");
+	$('#IngrediantFourteen').html(4 + " steak tips");
+	$('#IngrediantFifthteen').html(3.5 + "lbs optional pork");
+
+	
+	$("#DishSize").change(function(){
+
+	$('#TitleFood').html("Mongolian Beef");
+	$('#IngrediantOne').html("serves " +9*  $("input[name='Portion']:checked").val());
+	$('#IngrediantTwo').html(28*  $("input[name='Portion']:checked").val()+ " minuets to prepare");
+	$('#IngrediantThree').html(9*  $("input[name='Portion']:checked").val() + " hours to cook");
+	$('#IngrediantFour').html(5*  $("input[name='Portion']:checked").val()+ " tbsp cooking oil");
+	$('#IngrediantFive').html(4*  $("input[name='Portion']:checked").val()+ " cups of onions");
+	$('#IngrediantSix').html(4*  $("input[name='Portion']:checked").val()+ " lbs of beef strips");
+	$('#IngrediantSeven').html(7*  $("input[name='Portion']:checked").val()+ " beef broth for cooking");
+	$('#IngrediantEight').html(4*  $("input[name='Portion']:checked").val()+ " tbsp Chili powder");
+	$('#IngrediantNine').html(4*  $("input[name='Portion']:checked").val()+ " tbs salt");
+	$('#IngrediantTen').html(5*  $("input[name='Portion']:checked").val()+ " tbsp beef seasoning");
+	$('#IngrediantEleven').html(5*  $("input[name='Portion']:checked").val()+ " cups water");
+	$('#IngrediantTwelve').html(5*  $("input[name='Portion']:checked").val()+ " green peppers");
+	$('#IngrediantThirteen').html(5*  $("input[name='Portion']:checked").val() + " cup shredded cheese");
+	$('#IngrediantFourteen').html(4*  $("input[name='Portion']:checked").val()+ " steak tips");
+	$('#IngrediantFifthteen').html(3.5*  $("input[name='Portion']:checked").val()+ "lbs optional pork" );
+
+	});
+	
+	});
+
+	$("#CookIn").hide();
+	$("#CookDisplay").click(function(){
+	
+	var x = document.getElementById("CookIn");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+	
+	});
+	
+	
+	});
+	</script>
+	
+	<body>
+	<div id = "wrapper">	
+		<header>
+			<u><h1>Mr. Yozaki's Online chinese Dishes</h1></u>
+		</header>
+	
+		<content id = "main">
+		<div id = "PickSel"><img src = "default.gif"  width = 600cm height = 300cm align = "center"/></div>
+		<div id = "BeefPic"><img src = "mongolian-beef-11.jpg"  width = 600cm height = 300cm align = "center"/></div>
+		<div id = "OrangePic"><img src = "0227346_630x355.jpg" width = 600cm height = 300cm = "center"/></div>
+		<div id = "BeansPic"><img src = "Easy-Crockpot-Chili-Step-2.png"  width = 600cm height = 300cm align = "center"/></div>
+<ul>
+  <li><button type = "button" id = "Orange">Orange Chicken</button></li>
+  <li><button type = "button" id = "Beans">Baked Beans</button></li>
+  <li><button type = "button" id = "Beef">Mongolian Beef</button></li>
+</ul>
+		
+			<h1 align = "center">Required Ingrediants</h1></br>
+			<div id =  "Ajust">
+			<h2><div id = "TitleFood"></div></h2>
+			<div id ="IngrediantOne"></div>
+			<div id ="IngrediantTwo"></div>
+			<div id ="IngrediantThree"></div>
+			<div id ="IngrediantFour"></div>
+			<div id ="IngrediantFive"></div>
+			<div id ="IngrediantSix"></div>
+			<div id ="IngrediantSeven"></div>
+			<div id ="IngrediantEight"></div>
+			<div id ="IngrediantNine"></div>
+			<div id ="IngrediantTen"></div>
+			<div id ="IngrediantEleven"></div>
+			<div id ="IngrediantTwelve"></div>
+			<div id ="IngrediantThirteen"></div>
+			<div id ="IngrediantFourteen"></div>
+			<div id ="IngrediantFifthteen"></div>
+			<div id ="IngrediantSixTeen"></div>
+			<div id ="IngrediantSeventeen"></div>
+			<div id ="IngrediantEightteen"></div>
+			</div>
+			
+		<button type = "button" id = "CookDisplay">Cooking instructions</button>
+		<div id = "CookIn">
+		
+		<div id = "CookOrange">
+		
+		Keep frozen; cook thoroughly. Cooking instructions (from frozen): Keep frozen until ready to use. Since cooking methods vary, cooking time and temperature may require adjustment. Cook chicken thoroughly to 165 degrees F before eating. Conventional oven: 1. Preheat oven to 400 degrees F. 2. Remove sauce pouch and place unopened into a bowl of hot water to thaw. 3. Evenly place chicken on a foil-lined baking sheet and place on middle rack of preheated oven. Turn chicken over halfway through cooking cycle. 4. Bake chicken for 18-20 minutes or until the internal temperature of the largest piece of chicken reads 165 degrees F when pierced with an instant-read food thermometer. 5. Remove from oven and let stand 1 minute before serving. 6. Drizzle thawed sauce over chicken and serve. Deep fry: 1. Preheat deep fryer to 350 degrees F. 2. Remove sauce pouch and place unopened into a bowl of hot water to thaw. 3. Deep fry chicken for 6-7 minutes or until the internal temperature of the largest piece of chicken reads 165 degrees F when pierced with an instant-read food thermometer. 4. Let stand 1 minute before serving. 5. Drizzle thawed sauce over chicken and serve. Serving suggestions: 1. Toss cooked chicken with sauce to coat, or use sauce to dip. 2. Serve with rice or noodles. 3. Prepare as instructed above and stir-fry with your favorite vegetables. Always use oven mittens or potholders when handling hot items.
+
+ 
+		
+		</div>
+		
+		<div id = "CookBeef">
+		
+		Heat 2 teaspoons of vegetable oil in a saucepan over medium heat, and cook and stir the garlic and ginger until they release their fragrance, about 30 seconds. Pour in the soy sauce, water, and brown sugar. Raise the heat to medium-high, and stir 4 minutes, until the sugar has dissolved and the sauce boils and slightly thickens. Remove sauce from the heat, and set aside.
+		Place the sliced beef into a bowl, and stir the cornstarch into the beef, coating it thoroughly. Allow the beef and cornstarch to sit until most of the juices from the meat have been absorbed by the cornstarch, about 10 minutes.
+		Heat the vegetable oil in a deep-sided skillet or wok to 375 degrees F (190 degrees C).
+		Shake excess cornstarch from the beef slices, and drop them into the hot oil, a few at a time. Stir briefly, and fry until the edges become crisp and start to brown, about 2 minutes. Remove the beef from the oil with a large slotted spoon, and allow to drain on paper towels to remove excess oil.
+		Pour the oil out of the skillet or wok, and return the pan to medium heat. Return the beef slices to the pan, stir briefly, and pour in the reserved sauce. Stir once or twice to combine, and add the green onions. Bring the mixture to a boil, and cook until the onions have softened and turned bright green, about 2 minutes.
+		
+		</div>
+		
+		<div id = "CookBeans">
+		
+		Insructions:<br/>
+
+Heat cooking oil in 2 quart skillet.<br/>
+
+Saute onions and peppers for 5 minutes.<br/>
+
+Add spices and stir for 30 seconds.<br/>
+
+Add meat and cook until browned. Approximately 15 minutes.<br/>
+
+Pour contents of skillet into 3 quart crock pot.<br/>
+
+Rinse beans and place in crockpot.<br/>
+
+Open and pour Tomato puree and sauce into crock pot.<br/>
+
+Cover crockpot and cook on low for 6 hours.<br/>
+
+Serve into individual bowls and top with sour cream and cheese.<br/>
+		
+		</div>
+		
+		</div>
+		
+		
+		</content>
+		
+		
+
+		<content id = "sidebar">
+
+		<form id = "DishSize">
+		
+		<input type = "radio" name= "Portion" value = "0.5" id = "Half"></input>  Dish Size Half  </br>
+		<input type = "radio" name= "Portion" value = "1" id = "Half" checked="checked"></input>  Dish Size Full  </br>
+		<input type = "radio" name= "Portion" value = "2" id = "Half"></input>	Dish Size Double  </br>
+		
+		</form>
+		
+		
+		
+		</content>
+	
+	<content id ="footer">
+		
+	</content>
+</div>	
+	</body>
+
+</html>
